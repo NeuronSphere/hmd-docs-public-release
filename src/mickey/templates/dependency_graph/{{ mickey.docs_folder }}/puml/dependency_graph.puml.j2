@@ -1,0 +1,13 @@
+{%- macro list_deps(parent, deps) -%}
+{% for repo in split(deps, ',') %}
+{{ parent }} --> {{ repo }}
+{% endfor %}
+{%- endmacro -%}
+@startuml
+
+{% for repo in data %}
+{{ repo['Repository'] }}
+{{ list_deps(repo['Repository'], repo['Dependencies'])}}
+{% endfor %}
+
+@enduml
