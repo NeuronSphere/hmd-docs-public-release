@@ -1,13 +1,25 @@
 {%- macro list_deps(parent, deps) -%}
-{% for repo in split(deps, ',') %}
-{{ parent }} --> {{ repo }}
+{% for repo in deps.split(',\n') %}
+{{ parent | replace('-', '_')}} --> {{ repo | replace('-', '_')}}
 {% endfor %}
 {%- endmacro -%}
+{%- macro get_repo_title(repo) -%}
+{{ repo['Repository'] }} {% if repo['Version']%}v{{ repo['Version'] }} ({{ repo['Date'] }}){% endif %}
+{%- endmacro -%}
 @startuml
+left to right direction
+allowmixing
 
 {% for repo in data %}
-{{ repo['Repository'] }}
-{{ list_deps(repo['Repository'], repo['Dependencies'])}}
+package {{ repo['Repository'] | replace('-', '_')}} as "{{ get_repo_title(repo) }}" {% if repo['Version']%}#Green{% else %}#Red{% endif %} {
+  {% for tech in repo['Tech'].split(',') %}
+  component "{{ repo['Repository'] | replace('-', '_')}} - {{ tech }}"
+  {% endfor %}
+}
+{% endfor %}
+
+{% for repo in data %}
+{% if repo['Dependencies']|length > 0 %}{{ list_deps(repo['Repository'], repo['Dependencies'])}}{% endif %}
 {% endfor %}
 
 @enduml

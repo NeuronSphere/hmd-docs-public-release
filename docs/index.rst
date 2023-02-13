@@ -7,8 +7,8 @@ Welcome to hmd-docs-public-release's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   release_process
    releases/index
+   release_process
 
 
 Indexes and tables

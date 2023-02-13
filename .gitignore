@@ -138,3 +138,4 @@ yarn-error.log*
 src/python/build
 target/bartleby/
 .mickey_cache/
+docs/puml/dependency_graph.puml

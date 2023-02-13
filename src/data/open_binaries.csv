@@ -1,11 +1,22 @@
-Repository,Lastest Released Version,Lastest Release Date,License.txt Added,Snyk Ran,Docs Updated,README Updated,Dependencies,Technologies
-hmd-cli-mickey,1.0.41,2023-Feb-09,2023-Feb-09,2023-Feb-09,2023-Feb-09,2023-Feb-09,"hmd-cli-tools, hmd-tf-mickey, hmd-cli-app",Python
+Repository,Version,Date,License,Snyk,Docs,README,Dependencies,Tech
+hmd-cli-mickey,1.0.41,2023-Feb-09,2023-Feb-09,2023-Feb-09,2023-Feb-09,2023-Feb-09,"hmd-cli-tools,
+hmd-tf-mickey,
+hmd-cli-app",Python
 hmd-tf-mickey,,2023-Feb-09,2023-Feb-09,2023-Feb-09,2023-Feb-09,2023-Feb-09,,Docker
-hmd-cli-configure,1.0.24,2023-Jan-31,2023-Jan-31,2023-Jan-31,2023-Jan-31,2023-Jan-31,"hmd-cli-tools, hmd-cli-app",Python
+hmd-cli-configure,1.0.24,2023-Jan-31,2023-Jan-31,2023-Jan-31,2023-Jan-31,2023-Jan-31,"hmd-cli-tools,
+hmd-cli-app",Python
 hmd-cli-app,1.0.586,2023-Jan-31,2023-Jan-31,2023-Jan-31,2023-Jan-31,2023-Jan-31,hmd-cli-tools,Python
 hmd-cli-tools,1.0.211,2023-Jan-31,2023-Jan-31,2023-Jan-31,2023-Jan-31,2023-Jan-31,,Python
-hmd-cli-repo,,,,,,,"hmd-cli-app, hmd-cli-tools",Python
-hmd-cli-neuronsphere,,,,,,,"hmd-cli-app, hmd-cli-tools, hmd-img-local-gateway, hmd-img-jupyter-server, hmd-postgres-base, hmd-inf-superset, hmd-img-airflow, hmd-ms-transform",Python
+hmd-cli-repo,,,,,,,"hmd-cli-app,
+hmd-cli-tools",Python
+hmd-cli-neuronsphere,,,,,,,"hmd-cli-app,
+hmd-cli-tools,
+hmd-img-local-gateway,
+hmd-img-jupyter-server,
+hmd-postgres-base,
+hmd-inf-superset,
+hmd-img-airflow,
+hmd-ms-transform",Python
 hmd-img-local-gateway,,,,,,,,Docker
 hmd-img-jupyter-server,,,,,,,,Docker
 hmd-postgres-base,,,,,,,,Docker
@@ -13,10 +24,32 @@ hmd-inf-superset,,,,,,,,Docker
 hmd-img-airflow,,,,,,,,Docker
 hmd-ms-transform,,,,,,,,Docker
 hmd-ms-base,,,,,,,,Docker
-hmd-graphql,,,,,,,"hmd-cli-tools, hmd-entity-storage, hmd-meta-types, hmd-base-service, hmd-schema-loader",Python
-hmd-entity-storage,,,,,,,"hmd-meta-types, hmd-cli-tools",Python
+hmd-graphql,,,,,,,"hmd-cli-tools,
+hmd-entity-storage,
+hmd-meta-types,
+hmd-base-service,
+hmd-schema-loader",Python
+hmd-entity-storage,,,,,,,"hmd-meta-types,
+hmd-cli-tools",Python
 hmd-schema-loader,,,,,,,,Python
-hmd-graphql-client,,,,,,,"hmd-meta-types, hmd-schema-loader, hmd-entity-storage, hmd-cli-tools, hmd-lib-auth",Python
+hmd-graphql-client,,,,,,,"hmd-meta-types,
+hmd-schema-loader,
+hmd-entity-storage,
+hmd-cli-tools,
+hmd-lib-auth",Python
 hmd-meta-types,,,,,,,,"Python, Typescript"
-hmd-base-service,,,,,,,"hmd-lib-auth, hmd-cli-tools, hmd-entity-storage, hmd-schema-loader",Python
+hmd-base-service,,,,,,,"hmd-lib-auth,
+hmd-cli-tools,
+hmd-entity-storage,
+hmd-schema-loader",Python
 hmd-lib-auth,,,,,,,hmd-cli-tools,Python
+hmd-cli-build,,,,,,,"hmd-cli-app,
+hmd-cli-tools",Python
+hmd-cli-python,,,,,,,hmd-cli-build,Python
+hmd-cli-docker,,,,,,,hmd-cli-build,Python
+hmd-cli-transform-deploy,,,,,,,hmd-cli-build,Python
+hmd-cli-explorer,,,,,,,hmd-cli-build,Python
+hmd-cli-bartleby,,,,,,,"hmd-cli-app,
+hmd-cli-tools",Python
+hmd-cli-bender,,,,,,,"hmd-cli-app,
+hmd-cli-tools",Python
