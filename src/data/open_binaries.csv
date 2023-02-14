@@ -9,7 +9,7 @@ hmd-cli-app,1.0.586,2023-Jan-31,2023-Jan-31,2023-Jan-31,2023-Jan-31,2023-Jan-31,
 hmd-cli-tools,1.0.211,2023-Jan-31,2023-Jan-31,2023-Jan-31,2023-Jan-31,2023-Jan-31,,Python
 hmd-cli-repo,,,2023-Feb-14,2023-Feb-14,,,"hmd-cli-app,
 hmd-cli-tools",Python
-hmd-cli-neuronsphere,,,2023-Feb-14,2023-Feb-14,,,"hmd-cli-app,
+hmd-cli-neuronsphere,,,2023-Feb-14,2023-Feb-14,,2023-Feb-14,"hmd-cli-app,
 hmd-cli-tools,
 hmd-img-local-gateway,
 hmd-img-jupyter-server,
