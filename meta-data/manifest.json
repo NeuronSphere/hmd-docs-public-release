@@ -1,7 +1,9 @@
 {
   "name": "hmd-docs-public-release",
   "description": "Documentation for public release of NeuronSphere components",
-  "build": {},
+  "build": {
+    "commands": []
+  },
   "generate": {
     "open_binaries": {
       "contexts": ["src/data/open_binaries.csv"],
