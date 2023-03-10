@@ -8,4 +8,4 @@ Open Binary Releases
     :header-rows: 1
     :class: longtable
     :align: center
-    :widths: 35 25 25 25 25 25 25 35 25
+    :widths: 35 25 25 25 25 25 25 35 25 15
