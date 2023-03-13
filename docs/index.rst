@@ -7,7 +7,8 @@ Welcome to hmd-docs-public-release's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   releases/index
+   releases/dependency_graph
+   releases/open_binary_releases
    release_process
 
 
