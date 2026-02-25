@@ -139,3 +139,5 @@ src/python/build
 target/bartleby/
 .mickey_cache/
 docs/puml/dependency_graph.puml
+*.whl
+sboms/*
