@@ -6,8 +6,71 @@
   },
   "generate": {
     "open_binaries": {
-      "contexts": ["src/data/open_binaries.csv"],
-      "templates": ["hmd-docs-public-release/dependency_graph"]
+      "contexts": [
+        "src/data/open_binaries.csv"
+      ],
+      "templates": [
+        "hmd-docs-public-release/dependency_graph"
+      ]
     }
+  },
+  "discovery": {
+    "summary": "Tracks and coordinates the public open-source release of NeuronSphere components (hmd-cli-*, hmd-lib-*, etc.). It maintains a CSV registry (src/data/open_binaries.csv) of which repos/versions have been license-scrubbed and released, with scripts to sync that registry from local git tags, drive the actual hmd release commands per repo, and generate SBOMs. Sphinx docs publish the release process, the current open-binary release table, and a dependency graph to the Knowledge Base. This repo does not itself produce a deployable service; it is an internal release-engineering/documentation tool.",
+    "entry_points": [
+      {
+        "path": "docs/release_process.rst",
+        "description": "Documents the step-by-step binary release process (vuln scan, license scrub, LICENSE.txt, docs, manifest release.commands)."
+      },
+      {
+        "path": "src/data/open_binaries.csv",
+        "description": "Registry of released repos: version, release date, license/docs/readme dates, dependencies, tech, and public-code status."
+      },
+      {
+        "path": "src/scripts/release_binaries.py",
+        "description": "Script that reads open_binaries.csv and runs the corresponding hmd <tool> release commands per repo/tech, optionally generating SBOMs."
+      },
+      {
+        "path": "src/scripts/update_versions.py",
+        "description": "Script that refreshes open_binaries.csv version/date columns from each repo's latest local git tag."
+      },
+      {
+        "path": "src/python/prepare_binary_release.py",
+        "description": "Prepares a repo for public release: adds LICENSE.txt, sets license metadata in setup.py, and runs a Snyk scan build."
+      }
+    ],
+    "capabilities": [
+      {
+        "name": "release_binaries",
+        "kind": "cli_command",
+        "description": "Releases NeuronSphere repos from open_binaries.csv via hmd <tool> release, with --dry-run, --repo, --tech, --force, --sbom-dir, --skip-sbom options.",
+        "location": "src/scripts/release_binaries.py"
+      },
+      {
+        "name": "update_versions",
+        "kind": "cli_command",
+        "description": "Refreshes open_binaries.csv with each listed repo's latest local git tag version and date.",
+        "location": "src/scripts/update_versions.py"
+      },
+      {
+        "name": "prepare_binary_release",
+        "kind": "operation",
+        "description": "Adds Apache 2.0 LICENSE.txt and license metadata to a repo and kicks off a Snyk-scanned build in preparation for public release.",
+        "location": "src/python/prepare_binary_release.py"
+      }
+    ],
+    "related_docs": [
+      {
+        "title": "Release Process",
+        "path": "docs/release_process.rst"
+      },
+      {
+        "title": "Open Binary Releases",
+        "path": "docs/releases/open_binary_releases.rst"
+      },
+      {
+        "title": "Dependency Graph",
+        "path": "docs/releases/dependency_graph.rst"
+      }
+    ]
   }
 }
